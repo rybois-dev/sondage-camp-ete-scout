@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sondage camp d'été</title>
+    <link rel="stylesheet" type="text/css" href="../ressources/css/styles.css">
+    <link rel="icon" href="../ressources/img/logoEEUDF.png">
+    <script src="../ressources/js/transitionFormulaire.js" defer></script>
+    <script src="../ressources/js/envoieMail.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="../ressources/img/logoEEUDF.png" alt="logo EEUDF" id="logo">
+        <p class="center">Sondage du camp d'été</p>
+    </header>
+    <main>
+        <form id="form-access" class="center" method="post">
+
+            <!--Folklore et nombre de jours d'exploration-->
+            <section>
+                <img src="../ressources/img/logoEEUDF.png" alt="logo EEUDF">
+                        
+                <h1>
+                    Bienvenue au sondage du Camp d’Été 2026 !
+                </h1>
+
+                <div id="annonceSondage">
+                    <p>
+                        Chers parents, chers enfants,
+                    </p>
+
+                    <p>
+                        Le Camp d’Été 2026 est en pleine préparation, et nous avons hâte de vous proposer une expérience inoubliable ! Pour que ce séjour corresponde au mieux à vos attentes et à celles de votre enfant, nous avons besoin de votre avis.
+                    </p>
+                    <p>
+                        Ce court sondage nous permettra de mieux comprendre vos envies, vos besoins et vos suggestions. Prenez quelques minutes pour y répondre : vos retours sont précieux pour façonner un camp d’été unique, adapté et magique !
+                    </p>
+                    <p>
+                        Merci pour votre participation. Ensemble, faisons de ce camp un moment exceptionnel !
+                    </p>
+                </div>
+                
+
+                <div class="access-container">
+                    <label for="surname_children">Prénom de l'enfant :</label>
+                    <input id="surname_children" type="text" name="surname_children"/>
+                </div>
+                <div class="access-container">
+                    <label for="name_children">Nom de l'enfant :</label>
+                    <input id="name_children" type="text" name="name_children"/>
+                </div>
+                <input class="access-submit" type="button" onclick="suivant()" value="Passer à la suite">
+            </section>
+            <section class="cache">
+                <div class="access-container">
+                    <label for="folklore">Quel folklore souhaiterais-tu ?</label>
+                    <input id="folklore" type="text" name="folklore"/>
+                </div>
+                <div class="access-container">
+                    <label for="number_exploration">Combien de jour veux-tu que l'exploration dure ?</label>
+                    <select id="number_exploration" name="number_exploration"  required>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
+            </section>
+
+            <!--Activité-->
+            <section class="cache">
+                <div class="access-container">
+                    <label for="activity_sport1">Première proposition d'activité sportive que tu aimerais avoir durant le camp :</label>
+                    <input id="activity_sport1" type="text" name="activity_sport1">
+                </div>
+
+                <div class="access-container">
+                    <label for="activity_sport2">Seconde proposition d'activité sportive que tu aimerais avoir durant le camp :</label>
+                    <input id="activity_sport2" type="text" name="activity_sport2">
+                </div>
+
+                <div class="access-container">
+                    <label for="activity_other1">Première proposition d'une activité que tu aimerais avoir durant le camp :</label>
+                    <input id="activity_other1" type="text" name="activity_other1">
+                </div>
+
+                <div class="access-container">
+                    <label for="activity_other2">Seconde proposition d'une activité que tu aimerais avoir durant le camp :</label>
+                    <input id="activity_other2" type="text" name="activity_other2">
+                </div>
+
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
+            </section>
+
+            <!--Membre sur les sizaines-->
+            <section class="cache">
+                <div class="access-container">
+                    <label for="surname_children_sizaine1">Prénom de la première personne :</label>
+                    <input id="surname_children_sizaine1" type="text" name="surname_children_sizaine1"/>
+                </div>
+
+                <div class="access-container">
+                    <label for="name_children_sizaine1">Nom de la première personne :</label>
+                    <input id="name_children_sizaine1" type="text" name="name_children_sizaine1"/>
+                </div>
+
+                <div class="access-container">
+                    <label for="surname_children_sizaine2">Prénom de la seconde personne :</label>
+                    <input id="surname_children_sizaine2" type="text" name="surname_children_sizaine2"/>
+                </div>
+
+                <div class="access-container">
+                    <label for="name_children_sizaine2">Nom de la seconde personne :</label>
+                    <input id="name_children_sizaine2" type="text" name="name_children_sizaine2"/>
+                </div>
+
+                <div class="access-container">
+                    <label for="surname_children_sizaine3">Prénom de la troisième personne :</label>
+                    <input id="surname_children_sizaine3" type="text" name="surname_children_sizaine3"/>
+                </div>
+
+                <div class="access-container">
+                    <label for="name_children_sizaine3">Nom de la troisième personne :</label>
+                    <input id="name_children_sizaine3" type="text" name="name_children_sizaine3"/>
+                </div>
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
+            </section>
+
+            <!--Information sur l'enfant-->
+
+            <section class="cache">
+                <div class="access-container">
+                    <label for="diet">Suis-tu un régime alimentaire particulier ?</label>
+                    <select id="diet" name="diet"  required>
+                        <option value="Ne prononce pas" selected>Ne pas renseigner</option>
+                        <option value="Non">Non</option>
+                        <option value="Oui">Oui</option>
+                    </select>
+                </div>
+                <div class="access-container">
+                    <label for="health">Auras-tu un traitement durant la durée du camp ?</label>
+                    <select id="health" name="health"  required>
+                        <option value="Ne prononce pas" selected>Ne pas renseigner</option>
+                        <option value="Non">Non</option>
+                        <option value="Oui">Oui</option>
+                    </select>
+                    <p>Nous rappelons que pour tous traitements une ordonnance devra être fourni.</p>
+                </div>
+                <input type="hidden" name="idSondage" value="1">
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="submit" value="Valider">
+            </section>
+
+        </form>
+        <iframe src="/ressources/scout-background.html" frameborder="0" class="background-iframe"></iframe>
+    </main>
+    <footer>
+    <div class="center">
+        <div class="button-group">
+            <a href="./vosDonnees.html" class="button">Voir le traitement des données</a>
+            <a href="https://eeudf.org/calvisson/2026/03/05/camp-ete-louveteaux-2026/" class="button">Information sur le camp</a>
+            <a href="https://eeudf.org/calvisson/" class="button">Site des EEUDF de calvisson</a>
+        </div>
+        <p>&copy; 2026 Sondage scout, Groupe local de Calvisson.</p>
+    </div>
+</footer>
+</body>
+</html>
+
