@@ -33,6 +33,12 @@ document.addEventListener('DOMContentLoaded', function() {
             activity_sport2: document.getElementById('activity_sport2').value,
             activity_other1: document.getElementById('activity_other1').value,
             activity_other2: document.getElementById('activity_other2').value,
+            pisteIntention: document.getElementById('pisteIntention').value,
+            wishPiste: document.getElementById('wishPiste').value,
+            ideaPiste: document.getElementById('ideaPiste').value,
+            music1: document.getElementById('music1').value,
+            music2: document.getElementById('music2').value,
+            music3: document.getElementById('music3').value,
             surname_children_sizaine1: document.getElementById('surname_children_sizaine1').value,
             name_children_sizaine1: document.getElementById('name_children_sizaine1').value,
             surname_children_sizaine2: document.getElementById('surname_children_sizaine2').value,
@@ -41,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name_children_sizaine3: document.getElementById('name_children_sizaine3').value,
             diet: document.getElementById('diet').value,
             health: document.getElementById('health').value,
+            idSondage: document.querySelector('input[name="idSondage"]').value
         };
 
         // Envoyer les données à EmailJS
