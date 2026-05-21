@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sondage camp d'été</title>
+    <title>Sondage camp d'été</title>
     <link rel="stylesheet" type="text/css" href="ressources/css/styles.css">
     <link rel="icon" href="ressources/img/logoEEUDF.png">
     <script src="ressources/js/transitionFormulaire.js" defer></script>
@@ -15,6 +15,8 @@
         <img src="ressources/img/logoEEUDF.png" alt="logo EEUDF" id="logo">
         <p class="center">Sondage du camp d'été</p>
     </header>
+    <div id="flashes-container">
+    </div>
     <main>
         <form id="form-access" class="center">
 
@@ -23,10 +25,10 @@
                 <img src="ressources/img/logoEEUDF.png" alt="logo EEUDF">
                         
                 <h1>
-                    Bienvenue au sondage du Camp d’Été 2026 !
+                    Bienvenue au sondage du Camp d'Été 2026 !
                 </h1>
 
-                <div id="annonceSondage">
+                <div class="annonceSondage">
                     <p>
                         Chers parents, chers enfants,
                     </p>
@@ -96,7 +98,57 @@
                 <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
             </section>
 
+            <!--musique-->
+            <section class="cache">
+                <div class="access-container">
+                    <h1>Choisi trois musiques que tu souhaites écouter sur le camp.</h1>
+                    <p>Ces trois musiques seront ajoutées à la playlist du camp*.</p>
+                    <p><strong>*Toute musique ayant des propos grossiers ou discriminants seront rejetées.</strong></p>
+                </div>
+
+                <div class="access-container">
+                    <label for="music1">Première proposition de musique que tu aimerais avoir durant le camp :</label>
+                    <input id="music1" type="text" name="music1" placeholder="Nom de l'artiste + Nom de la musique">
+                </div>
+
+                <div class="access-container">
+                    <label for="music2">Seconde proposition de musique que tu aimerais avoir durant le camp :</label>
+                    <input id="music2" type="text" name="music2" placeholder="Nom de l'artiste + Nom de la musique">
+                </div>
+
+                <div class="access-container">
+                    <label for="music3">Troisième proposition de musique que tu aimerais avoir durant le camp :</label>
+                    <input id="music3" type="text" name="music3" placeholder="Nom de l'artiste + Nom de la musique">
+                </div>
+
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
+            </section>
+
             <!--Membre sur les sizaines-->
+            <section class="cache">
+                <div class="access-container">
+                    <h1 class="title">Passons maintenant à la constitution de ton équipe :</h1>
+                    <p>Nous te proposons de renseigner jusqu'à 3 amis avec qui tu souhaiterais être.</p>
+                </div>
+                
+                <div class="access-container annonceSondage">
+                    <h2>Pourquoi créer des équipes ?</h2>
+                    <p>On forme des équipes pour organiser les services quotidiens (vaisselle, préparation des repas et hygiène), afin que chacun participe et que les tâches soient partagées équitablement. </p>
+                    <p>Les équipes servent aussi pour le concours inter-sizaine : chaque sizaine s'affrontera dans des épreuves ludiques et sportives pour gagner des points et des récompenses.</p>
+            
+                    <h2>Comment faisons nous les équipes ?</h2>
+                    <p>La création d'équipe est très délicate. Nous essayons d'équilibrer les équipes en fonction de plusieurs paramètres. (âge, nombre d'années au scout, séparation des enfants de la même famille, ...)</p>
+                    <p>Les personnes que vous renseignerez seront prises en compte du mieux que nous pouvons dans la constitution des équipes.
+                        Notre objectif est de vous faire passer le meilleur camp possible..</p>
+                    <p>Si tu n'as pas de préférence, tu peux passer à la suite sans renseigner d'informations.</p>
+
+                    <p><strong>Il est important de noter qu'il n'est pas possible de faire plaisir à tout le monde.</strong></p>
+                </div>
+
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Passer à la constitution des équipes">
+            </section>
             <section class="cache">
                 <div class="access-container">
                     <label for="surname_children_sizaine1">Prénom de la première personne :</label>
@@ -149,7 +201,7 @@
                         <option value="Non">Non</option>
                         <option value="Oui">Oui</option>
                     </select>
-                    <p>Nous rappelons que pour tous traitements une ordonnance devra être fourni.</p>
+                    <p>Nous rappelons que pour tous traitements une ordonnance devra être fournie.</p>
                 </div>
                 <input type="hidden" name="idSondage" value="1">
                 <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
@@ -171,4 +223,3 @@
 </footer>
 </body>
 </html>
-
