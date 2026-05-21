@@ -49,3 +49,16 @@ function precedent() {
     } while (i > 0 && trouve === 0);
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    const pisteIntentionSelect = document.getElementById('pisteIntention');
+    const transitionPisteDiv = document.querySelector('.transitionPiste');
+
+    pisteIntentionSelect.addEventListener('change', function () {
+        if (this.value === 'Oui') {
+            transitionPisteDiv.classList.remove('cache');
+        } else {
+            transitionPisteDiv.classList.add('cache');
+        }
+    });
+});
+

@@ -98,6 +98,54 @@
                 <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
             </section>
 
+            <!--progression personnelle-->
+            <section class="cache">
+                <div class="access-container">
+                    <h1>Qu'est-ce qu'une piste ?</h1>
+                    <p>Une piste correspond à une compétence dans ta progression personnelle.</p>
+                    <p>Il existe 5 types de pistes associés à 5 animaux :</p>
+                    <ul>
+                        <li>Riki - Compétence liée à la protection de la nature</li>
+                        <li>Éréné - Compétence liée à l'esprit, la réflexion, artisant de la paix</li>
+                        <li>Baghera - Compétence liée à la pratique sportive</li>
+                        <li>Baloo - Compétence liée au bien être</li>
+                        <li>Fiber - Compétence liée au bricolage</li>
+                    </ul>
+                    <p>Chaque animal représente un domaine de compétence.</p>
+                </div>
+
+                <div class="access-container">
+                    <label for="pisteIntention">As-tu l'intention de réaliser une piste ?</label>
+                    <select id="pisteIntention" name="pisteIntention">
+                        <option value="Ne prononce pas" selected>Ne pas renseigner</option>
+                        <option value="Non">Non</option>
+                        <option value="Oui">Oui</option>
+                    </select>
+                </div>
+
+                <div class="cache transitionPiste">
+                    <div class="access-container">
+                        <label for="wishPiste">Quelle est ta deuxième proposition de piste ?</label>
+                        <select id="wishPiste" name="wishPiste">
+                        <option value="Ne sait pas" selected>Je ne sais pas</option>
+                        <option value="Riki">Riki - Compétence liée à la protection de la nature</option>
+                        <option value="Eréné">Éréné - Compétence liée à l'esprit, la réflexion, artisant de la paix</option>
+                        <option value="Baghera">Baghera - Compétence liée à la pratique sportive</option>
+                        <option value="Baloo">Baloo - Compétence liée au bien être</option>
+                        <option value="Fiber">Fiber - Compétence liée au bricolage</option>
+                        </select>
+                    </div>
+
+                    <div class="access-container">
+                        <label for="ideaPiste">As-tu une idée de piste en tête ?</label>
+                        <textarea id="ideaPiste" cols="5" rows="2" name="ideaPiste" placeholder="Décris ton idée de piste ici si tu en as déjà une en tête."></textarea>
+                    </div>
+                </div>
+
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
+            </section>
+
             <!--musique-->
             <section class="cache">
                 <div class="access-container">
