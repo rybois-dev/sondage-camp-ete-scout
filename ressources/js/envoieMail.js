@@ -47,10 +47,12 @@ document.addEventListener('DOMContentLoaded', function() {
         emailjs.send('service_fh50bss', 'template_jjgte0g', formData, '37fMLSM3pfkw8zHbz')
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
+                 window.location.href = '/success.html';
                 // Soumettre le formulaire après l'envoi réussi de l'email
                 form.submit();
             }, function(error) {
                 console.log('FAILED...', error);
+                window.location.href = '/error.html';
                 // Soumettre le formulaire même si l'envoi de l'email échoue
                 form.submit();
             });
