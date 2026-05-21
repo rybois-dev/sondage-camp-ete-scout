@@ -47,10 +47,10 @@ document.addEventListener('DOMContentLoaded', function() {
         emailjs.send('service_fh50bss', 'template_jjgte0g', formData, '37fMLSM3pfkw8zHbz')
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
-                 window.location.href = '/success.html';
+                 window.location.href = 'success.html';
             }, function(error) {
                 console.log('FAILED...', error);
-                window.location.href = '/error.html';
+                window.location.href = 'error.html';
             });
     });
 });
