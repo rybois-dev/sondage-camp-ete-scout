@@ -28,6 +28,11 @@ header {
     height: 3%;/*25px;*/
 }
 
+#pagePrincipale img{
+    width: 20%;
+    height: auto;
+}
+
 footer {
     background-color: #22ac2786;
     text-align: center;
@@ -71,7 +76,7 @@ textarea {
 }
 
 .annonceSondage {
-    margin: auto;
+    margin-bottom: 2%;
     text-align: left !important;
     width: 90%;
     border: 1px Solid #0bf113;
@@ -429,7 +434,7 @@ nav a {
 
 
     footer {
-        height: 15%;
+        height: 20%;
     }
 
     footer * {
