@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             name_children_sizaine2: document.getElementById('name_children_sizaine2').value,
             surname_children_sizaine3: document.getElementById('surname_children_sizaine3').value,
             name_children_sizaine3: document.getElementById('name_children_sizaine3').value,
+            wishSiz: document.getElementById('wishSiz').value,
             diet: document.getElementById('diet').value,
             health: document.getElementById('health').value,
             idSondage: document.querySelector('input[name="idSondage"]').value
