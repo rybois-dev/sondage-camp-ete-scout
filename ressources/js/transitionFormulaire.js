@@ -4,7 +4,6 @@ function suivant() {
     let i = 0;
     let trouve = 0;
     do {
-        if (i > 0 && !nomEtPrenomSontRenseigne()) return;
         if (!sectionsFormulaire.item(i).classList.contains("cache")) {
             sectionsFormulaire.item(i).classList.add("cache");
             if (i + 1 < sectionsFormulaire.length) {
@@ -53,16 +52,16 @@ function nomEtPrenomSontRenseigne() {
     const flashesContainer = document.getElementById('flashes-container');
     const existingError = flashesContainer.querySelector('.flashes-error');
 
-        if (!surname || !name) {
+    if (!surname || !name) {
         if (!existingError) {
             const errorSpan = document.createElement('span');
             errorSpan.className = 'flashes flashes-error';
             errorSpan.textContent = 'Veuillez saisir le nom prénom';
             flashesContainer.appendChild(errorSpan);
+            return;
         }
-        return false;
     } else if (existingError) {
         flashesContainer.removeChild(existingError);
-        return true;
     }
+    suivant();
 }
