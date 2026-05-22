@@ -21,14 +21,14 @@
         <form id="form-access" class="center">
 
             <!--Folklore et nombre de jours d'exploration-->
-            <section>
+            <section id="pagePrincipale">
                 <img src="ressources/img/logoEEUDF.png" alt="logo EEUDF">
                         
                 <h1>
                     Bienvenue au sondage du Camp d'Été 2026 !
                 </h1>
 
-                <div class="annonceSondage">
+                <div class="annonceSondage center">
                     <p>
                         Chers parents, chers enfants,
                     </p>
@@ -43,8 +43,10 @@
                         Merci pour votre participation. Ensemble, faisons de ce camp un moment exceptionnel !
                     </p>
                 </div>
+                <input class="access-submit" type="button" onclick="suivant()" value="Commencer">
                 
-
+            </section>
+            <section class="cache">
                 <div class="access-container">
                     <label for="surname_children">Prénom de l'enfant :</label>
                     <input id="surname_children" type="text" name="surname_children"/>
@@ -113,7 +115,11 @@
                     </ul>
                     <p>Chaque animal représente un domaine de compétence.</p>
                 </div>
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
+            </section>
 
+            <section class="cache">
                 <div class="access-container">
                     <label for="pisteIntention">As-tu l'intention de réaliser une piste ?</label>
                     <select id="pisteIntention" name="pisteIntention">
@@ -207,7 +213,11 @@
                     <label for="name_children_sizaine1">Nom de la première personne :</label>
                     <input id="name_children_sizaine1" type="text" name="name_children_sizaine1"/>
                 </div>
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
+            </section>
 
+            <section class="cache">
                 <div class="access-container">
                     <label for="surname_children_sizaine2">Prénom de la seconde personne :</label>
                     <input id="surname_children_sizaine2" type="text" name="surname_children_sizaine2"/>
@@ -217,7 +227,11 @@
                     <label for="name_children_sizaine2">Nom de la seconde personne :</label>
                     <input id="name_children_sizaine2" type="text" name="name_children_sizaine2"/>
                 </div>
-
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
+            </section>
+            
+            <section class="cache">
                 <div class="access-container">
                     <label for="surname_children_sizaine3">Prénom de la troisième personne :</label>
                     <input id="surname_children_sizaine3" type="text" name="surname_children_sizaine3"/>
@@ -226,6 +240,18 @@
                 <div class="access-container">
                     <label for="name_children_sizaine3">Nom de la troisième personne :</label>
                     <input id="name_children_sizaine3" type="text" name="name_children_sizaine3"/>
+                </div>
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
+            </section>
+
+            <section class="cache">
+                <div class="access-container">
+                    <label for="wishSiz">Souhaiterais-tu être sizenier (chef d'équipe) ?</label>
+                    <select id="wishSiz" name="wishSiz">
+                        <option value="Non" selected>Non</option>
+                        <option value="Oui">Oui</option>
+                    </select>
                 </div>
                 <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
                 <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
