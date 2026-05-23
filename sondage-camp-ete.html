@@ -48,13 +48,14 @@
             </section>
             <section class="cache">
                 <div class="access-container">
-                    <label for="surname_children">Prénom de l'enfant :</label>
+                    <label for="surname_children">Prénom de l'enfant* :</label>
                     <input id="surname_children" type="text" name="surname_children"/>
                 </div>
                 <div class="access-container">
-                    <label for="name_children">Nom de l'enfant :</label>
+                    <label for="name_children">Nom de l'enfant* :</label>
                     <input id="name_children" type="text" name="name_children"/>
                 </div>
+                <p>* champ requis</p>
                 <input class="access-submit" type="button" onclick="nomEtPrenomSontRenseigne()" value="Passer à la suite">
             </section>
             <section class="cache">
@@ -76,6 +77,18 @@
 
             <!--Activité-->
             <section class="cache">
+                <h1>Maintenant passons aux activités de camp !</h1>
+                <div class="access-container annonceSondage center">
+                    <p>Cette section du questionnaire recueille tes idées d'activités pour le camp.
+                        Indique deux propositions d'activités sportives et deux autres activités (créatives, culturelle , ludiques, éducatives, ...) que tu aimerais voir au programme.
+                        Tes suggestions nous aideront à organiser des ateliers variés et adaptés aux envies du groupe.
+                    </p>
+                </div>
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
+            </section>
+
+            <section class="cache">
                 <div class="access-container">
                     <label for="activity_sport1">Première proposition d'activité sportive que tu aimerais avoir durant le camp :</label>
                     <input id="activity_sport1" type="text" name="activity_sport1">
@@ -85,7 +98,11 @@
                     <label for="activity_sport2">Seconde proposition d'activité sportive que tu aimerais avoir durant le camp :</label>
                     <input id="activity_sport2" type="text" name="activity_sport2">
                 </div>
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
+            </section>
 
+            <section class="cache">
                 <div class="access-container">
                     <label for="activity_other1">Première proposition d'une activité que tu aimerais avoir durant le camp :</label>
                     <input id="activity_other1" type="text" name="activity_other1">
@@ -94,6 +111,16 @@
                 <div class="access-container">
                     <label for="activity_other2">Seconde proposition d'une activité que tu aimerais avoir durant le camp :</label>
                     <input id="activity_other2" type="text" name="activity_other2">
+                </div>
+
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
+            </section>
+
+            <section class="cache">
+                <div class="access-container">
+                    <label for="evening">A quelle(s) veillée(s) aimerais-tu assister durant ce camp ?</label>
+                    <textarea id="evening" cols="5" rows="2" name="evening" placeholder="Décris tes idées de veillée(s)"></textarea>
                 </div>
 
                 <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
