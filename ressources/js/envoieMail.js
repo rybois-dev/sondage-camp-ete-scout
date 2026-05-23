@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             activity_other1: document.getElementById('activity_other1').value,
             activity_other2: document.getElementById('activity_other2').value,
             pisteIntention: document.getElementById('pisteIntention').value,
+            evening: document.getElementById('evening').value,
             wishPiste: document.getElementById('wishPiste').value,
             ideaPiste: document.getElementById('ideaPiste').value,
             music1: document.getElementById('music1').value,
