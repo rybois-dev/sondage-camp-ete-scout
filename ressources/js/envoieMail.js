@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
             wishSiz: document.getElementById('wishSiz').value,
             diet: document.getElementById('diet').value,
             health: document.getElementById('health').value,
+            suggest: document.getElementById('suggest').value,
             idSondage: document.querySelector('input[name="idSondage"]').value
         };
 
