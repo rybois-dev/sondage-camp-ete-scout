@@ -304,9 +304,17 @@
                     </select>
                     <p>Nous rappelons que pour tous traitements une ordonnance devra être fournie.</p>
                 </div>
+                <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
+                <input class="access-submit" type="button" onclick="suivant()" value="Suivant">
+            </section>
+            <section class="cache">
+                <div class="access-container">
+                    <label for="suggest">D'autres sugestions pour le camp ? </label>
+                    <textarea id="suggest" cols="5" rows="2" name="suggest"></textarea>
+                </div>
                 <input type="hidden" name="idSondage" value="1">
                 <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
-                <input class="access-submit" type="submit" value="Valider">
+                <input class="access-submit" type="submit" value="Envoyer les réponses">
             </section>
 
         </form>
