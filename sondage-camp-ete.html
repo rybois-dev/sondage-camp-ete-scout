@@ -8,6 +8,7 @@
     <link rel="icon" href="ressources/img/logoEEUDF.png">
     <script src="ressources/js/transitionFormulaire.js" defer></script>
     <script src="ressources/js/envoieMail.js" defer></script>
+    <script src="ressources/js/barDeChargment.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
@@ -314,7 +315,15 @@
                 </div>
                 <input type="hidden" name="idSondage" value="1">
                 <input class="access-submit" type="button" onclick="precedent()" value="Précedent">
-                <input class="access-submit" type="submit" value="Envoyer les réponses">
+                <input id="start" class="access-submit" type="submit" onclick="suivant()" value="Envoyer les réponses">
+            </section>
+
+            <section class="cache">
+                <div class="progress-container">
+                    <h1>Envoi en cours...</h1>
+                    <div id="bar" class="progress-bar">0%</div>
+                    <p>Veuillez ne pas recharger la page.</p>
+                </div>
             </section>
 
         </form>
